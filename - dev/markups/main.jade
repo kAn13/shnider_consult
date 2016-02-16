@@ -1,0 +1,18 @@
+include _mixins
+include _variables
+
+doctype html
+html
+    include _common/_head
+
+    body
+        .wrapper
+            include _common/_header
+            include _common/_nav
+            include _common/_slider
+            block content
+        include _common/_footer
+            
+        script(src='js/plugins.min.js')
+        script(src='js/main.min.js')
+

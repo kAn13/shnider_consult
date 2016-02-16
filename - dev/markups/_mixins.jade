@@ -1,0 +1,27 @@
+mixin nav(className, items)
+	nav(class=className)
+		.container
+			ul(class="#{className}__list")
+				each item in items
+					li(class="#{className}__item")
+						a(href="#" class="#{className}__link")
+							span(class="#{className}__elem")= item
+
+mixin footer-nav(className, items)
+	nav(class=className)
+		ul(class="#{className}__list")
+			each item in items
+				li(class="#{className}__item")
+					a(href="#" class="#{className}__link")= item
+
+- var data = [{'time': '14 сентября 2015 г.', 'datetime': '2014-09-14T15:25:00', 'header': 'Акция на входные двери Фалько!'}, {'time': '14 сентября 2015 г.', 'datetime': '2014-09-14T15:25:00', 'header': 'Установка межкомнатных дверй в подарок при покупке 3-х полотен!'}, {'time': '14 сентября 2015 г.', 'datetime': '2014-09-14T15:25:00', 'header': 'Новинка! Термо двери Форт!'}, {'time': '14 сентября 2015 г.', 'datetime': '2014-09-14T15:25:00', 'header': 'Установка межкомнатных дверй в подарок при покупке 3-х полотен!'}, {'time': '14 сентября 2015 г.', 'datetime': '2014-09-14T15:25:00', 'header': 'Новинка! Термо двери Форт!'}]
+
+mixin news(className, data)
+	.news
+		h2(class="#{className}__title")
+			| Новости
+		ul(class="#{className}__list")
+			each key in data
+				li(class="#{className}__item")
+					time(datetime="#{key.datetime}" class="#{className}__time")= key.time
+					h5(class="#{className}__header")= key.header

@@ -1,0 +1,32 @@
+@mixin open-sans($style: regular) {
+    font-family: 'Open Sans', sans-serif;
+    @if ($style==light) {
+        font-weight: 100;
+    }
+    @if ($style==regular) {
+        font-weight: 400;
+    }
+    @if ($style==semibold) {
+        font-weight: 600;
+    }
+    @if ($style==bold) {
+        font-weight: 700;
+    }
+
+    @if ($style==extrabold) {
+        font-weight: 800;
+    }
+}
+
+
+@mixin pt-sans($style: normal) {
+    font-family: 'PT Sans', sans-serif;
+
+    @if($style==normal) {
+        font-weight: 400;
+    }
+
+    @if($style==bold) {
+        font-weight: 700;
+    }
+}

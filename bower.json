@@ -1,0 +1,6 @@
+{
+  "name": "sadykov",
+  "devDependencies": {
+    "moment": "~2.11.2"
+  }
+}

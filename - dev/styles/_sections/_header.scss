@@ -1,0 +1,40 @@
+.main-header {
+    position: relative;
+    background: #dcdcdc;
+    min-height: 199px;
+    overflow: hidden;
+    .logo {
+        position: absolute;
+        top: 45px;
+        &__text {
+            position: absolute;
+            left: -9999px;
+        }
+    }
+    .sale {
+        position: absolute;
+        left: 418px;
+        top: 67px;
+        max-width: 265px;
+        max-height: 110px;
+        overflow: hidden;
+        font-size: 17px;
+        line-height: 22px;
+        letter-spacing: .4px;
+    }
+    .phones {
+        position: absolute;
+        right: 10px;
+        top: 46px;
+        max-width: 288px;
+        max-height: 140px;
+        overflow: hidden;
+        &__number {
+            @include open-sans(extrabold);
+            color: #767676;
+            font-size: 31px;
+            line-height: 46px;
+            letter-spacing: .7px;
+        }
+    }
+}

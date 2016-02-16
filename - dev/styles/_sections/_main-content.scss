@@ -1,0 +1,94 @@
+.main-content {
+    min-height: 755px;
+    .sidebar {
+        width: 350px;
+        float: left;
+        min-height: 560px;
+        @include box-sizing(border-box);
+        padding: 13px 34px;
+        background: #777777;
+        color: #fff;
+        .news {
+            &__header {
+                margin: 0;
+                @include open-sans(light);
+                font-size: 14px;
+            }
+            &__list {
+                margin-bottom: 71px;
+            }
+            &__item {
+                margin-bottom: 22px;
+            }
+            &__title {
+                margin: 0;
+                margin-bottom: 25px;
+                font-size: 40px;
+                line-height: 46px;
+                color: #fff;
+                @include pt-sans(bold);
+            }
+            &__time {
+                @include open-sans(light);
+                font-style: italic;
+            }
+            &__stock-archive {
+                text-align: right;
+                margin-right: 18px;
+            }
+            &__link {
+                color: #fff;
+                text-decoration: none;
+                span {
+                    border-bottom: 1px solid #fff;
+                }
+                &:hover {
+                    span {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        width: 570px;
+        float: right;
+        min-height: 560px;
+        padding-top: 13px;
+        padding-bottom: 7px;
+    }
+    .about-us {
+        padding-bottom: 28px;
+        &__title {
+            margin: 0;
+            margin-bottom: 22px;
+            @include open-sans(regular);
+            font-size: 33px;
+            line-height: 38px;
+        }
+        &__descr {
+            margin-bottom: 22px;
+        }
+    }
+    .business {
+        &__wrap {
+            -moz-column-count: 2;
+            -webkit-column-count: 2;
+            column-count: 2;
+        }
+        &__title {
+            margin: 0;
+            @include open-sans(regular);
+            font-size: 24px;
+            margin-bottom: 35px;
+        }
+        &__descr {
+            max-width: 262px;
+            margin-bottom: 20px;
+        }
+        &__descr-title {
+            margin-top: 0;
+            margin-bottom: 22px;
+        }
+    }
+}
